@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="300.0" prefWidth="400.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="400.0" minWidth="200.0" prefWidth="200.0" />
+      <ColumnConstraints maxWidth="400.0" minWidth="200.0" prefWidth="300.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="100.0" />
+      <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="100.0" />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+
+      <!--Text field for enter guesses-->
+      <TextField onAction="#guess" prefHeight="26.0" prefWidth="73.0" text="Enter a letter to guess." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <!--Text field for entering a secret word-->
+      <TextField onAction="#setSecretWord" prefHeight="26.0" prefWidth="120.0" text="Enter a word to start a new game." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <!--text showing the word with the letters guessed so far-->
+      <Label fx:id="guessedWord" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+      <!--game instructions-->
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1 Enters a Secret Word" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="and have Player 2 guesses the" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="secret word using the left text box" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.valignment="BOTTOM" />
+
+      <Text fx:id="winMes" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="BOTTOM" />
+      <Text fx:id="letterMes" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+      <!--rectangles are used to show the number of guesses left-->
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="PURPLE" height="75.0" stroke="BLACK" strokeType="INSIDE" width="350.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="BLUE" height="75.0" stroke="BLACK" strokeType="INSIDE" width="300.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="GREEN" height="75.0" stroke="BLACK" strokeType="INSIDE" width="250.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="YELLOW" height="75.0" stroke="BLACK" strokeType="INSIDE" width="200.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect6" arcHeight="5.0" arcWidth="5.0" fill="RED" height="75.0" stroke="BLACK" strokeType="INSIDE" width="100.0" x="0" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="rect7" arcHeight="5.0" arcWidth="5.0" fill="BLACK" height="75.0" stroke="BLACK" strokeType="INSIDE" width="50.0" x="50" y="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Text fx:id="lives" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" LIVES" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
